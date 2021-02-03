@@ -11,14 +11,13 @@ from telegram.ext import (
 
 from const import GREETING_MESSAGE, HELP_MESSAGE
 from models import Match, User
+from const import UPDATER_TOKEN
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
 )
 
-updater = Updater(
-    token="695761069:AAHRgeaFcrILV-N3PCgczJ-jP-vbKrzJcW4", use_context=True
-)
+updater = Updater(token=UPDATER_TOKEN, use_context=True)
 dispatcher = updater.dispatcher
 
 gamers = []

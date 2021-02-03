@@ -1,3 +1,5 @@
+UPDATER_TOKEN = "<put yours token here>"
+
 GREETING_MESSAGE = (
     u"Привет. \u270B Это футбольный бот dextechnology. \u26BD Я нужен для сохранения и "
     u"отображения статистики матчей."
