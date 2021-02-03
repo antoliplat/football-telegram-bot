@@ -1,6 +1,8 @@
-from .base_models import *
-from .models import *
+from peewee import SqliteDatabase
 
-db = SqliteDatabase('database.sqlite')
+from models.base_models import BaseModel  # noqa
+from models.models import Match, User
+
+db = SqliteDatabase("database.sqlite")
 db.connect()
 db.create_tables([User, Match])

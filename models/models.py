@@ -1,6 +1,6 @@
 import datetime
 
-from peewee import CharField, ForeignKeyField, DateTimeField, IntegerField
+from peewee import CharField, DateTimeField, ForeignKeyField, IntegerField
 
 from models import BaseModel
 
@@ -11,8 +11,8 @@ class User(BaseModel):
 
 
 class Match(BaseModel):
-    first_opponent_user_id = ForeignKeyField(User, backref='matches')
-    second_opponent_user_id = ForeignKeyField(User, backref='matches')
+    first_opponent_user_id = ForeignKeyField(User, backref="matches")
+    second_opponent_user_id = ForeignKeyField(User, backref="matches")
     created_date = DateTimeField(default=datetime.datetime.now)
     first_opponent_score = IntegerField()
     second_opponent_score = IntegerField()

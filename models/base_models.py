@@ -1,6 +1,6 @@
 from peewee import Model, SqliteDatabase
 
-db = SqliteDatabase('database.sqlite')
+db = SqliteDatabase("database.sqlite")
 
 
 class BaseModel(Model):
